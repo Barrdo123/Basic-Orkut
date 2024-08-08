@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/static/css/page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Orkut 2.0</title>
+</head>
+<body>
+
+    <nav>
+        <div class="wrapper">
+            <a href="/postar">Postar</a>
+            <a href="/posts">Meus Posts</a>
+            <a href="/depoimentos">Depoimentos</a>
+            <a href="/listar/usuarios">Usuarios</a>
+        </div>
+        <div class="wrapper">
+            <a href="/logout">Logout</a>
+        </div>
+    </nav>
+
+    <main>
+        <div id="Postagem">
+            <h3>O que você está pensando hoje?</h3>
+            <form method="POST" >
+                <textarea name="post"></textarea>
+                <button>Postar</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

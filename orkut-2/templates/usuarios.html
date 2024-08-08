@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Orkut 2.0 | Usuarios</title>
+    <link rel="shortcut icon" href="/static/img/logo.png" type="image/x-icon">
+    <style>
+        :root {
+            --nav-height: 70px;
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --text-color: #2c3e50;
+            --highlight-color: #ff5252;
+        }
+
+        body {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            padding: 20px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: var(--text-color); 
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+
+        a {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: var(--text-color); 
+            text-align: center;
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 10px;
+            display: block;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: scale(1);
+        }
+
+        a:hover {
+            background: linear-gradient(to right, var(--primary-color), var(--highlight-color));
+            transform: scale(1.05);
+        }
+
+        p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    {% for user in usuarios %}
+    <a href="/{{ user.usuario }}/posts">
+        <p><strong>Nome:</strong> {{ user.nome }} {{ user.sobrenome }}</p>
+        <p><strong>Usuario:</strong> {{ user.usuario }}</p>
+        <p><strong>Membro desde:</strong> {{ user.criado_em.strftime("%d/%m/%Y %H:%M") }}</p>
+    </a>
+    {% endfor %}
+</body>
+</html>

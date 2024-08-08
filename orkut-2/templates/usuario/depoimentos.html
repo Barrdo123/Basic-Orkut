@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orkut 2.0</title>
+    <link rel="stylesheet" href="/static/css/page.css">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <a href="/posts">Home</a>
+            <a href="/{{ usuario }}/postar">Postar depoimento</a>
+            <a href="/{{ usuario }}/posts">Posts de {{ usuario }}</a>
+            <a href="/{{ usuario }}/depoimentos">Depoimentos</a>
+            <a href="/listar/usuarios">Usuarios</a>
+        </div>
+        <div class="wrapper">
+            
+            <a href="/logout">Logout</a>
+        </div>
+    </nav>
+    <main>
+        <h1>Visualizando depoimento para usuario</h1>
+    
+        <div class="posts">
+            {% for post in posts %}
+                <div class="post">
+                    <div class="post-header">
+                        <div class="authors">
+                            <p>#{{ post.id }} De: {{ post.de }}
+                        </div>
+                        <div class="time">
+                            <p>{{ post.criado_em.strftime("%d/%m/%Y") }}</p>
+                            <p>{{ post.criado_em.strftime("%H:%M") }}</p>
+                        </div>
+                    </div>
+                    <pre class="content">{{ post.conteudo }}</pre>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>

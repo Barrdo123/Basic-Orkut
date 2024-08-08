@@ -1,0 +1,148 @@
+:root {
+    font-family: 'Roboto', sans-serif;
+    --primary: #3498db;
+    --secondary: #2ecc71;
+    --background: #ecf0f1;
+    --text: #34495e;
+}
+
+body {
+    background-color: var(--background);
+    margin: 0;
+    font-size: 16px;
+    color: var(--text);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 30px;
+    color: var(--primary);
+}
+
+h3 a {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: var(--primary);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+h3 a:hover {
+    background-color: var(--secondary);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 40px 20px;
+    border-radius: 20px;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+form input {
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+form label {
+    align-self: flex-start;
+    padding-left: 8px;
+    font-size: 1rem;
+    user-select: none;
+}
+
+form button {
+    background: var(--primary);
+    border: none;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: background-color 200ms, color 200ms;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    cursor: pointer;
+}
+
+form button:enabled {
+    color: var(--background);
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.input-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password {
+    font-size: 1rem;
+    color: var(--text);
+    cursor: pointer;
+    margin-left: -25px;
+}
+
+.toggle-password:hover {
+    color: var(--primary);
+}
+
+form button:hover:enabled {
+    background-color: var(--secondary);
+}
+
+form button:active:enabled {
+    background-color: var(--primary);
+}
+
+.input-field {
+    border-bottom: var(--secondary) solid 1px;
+    margin-bottom: -1px;
+    height: 48px;
+}
+
+.input-field:has(*:focus),
+.input-field:focus {
+    border-bottom: var(--secondary) solid 3px;
+    margin-bottom: -3px;
+}
+
+.input-field,
+input {
+    background-color: var(--background);
+    width: 300px;
+}
+
+@media (orientation: portrait) {
+    main {
+        width: 320px;
+    }
+}

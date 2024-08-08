@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="/static/img/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="/static/css/cadastrar.css">
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <meta name="viewport" content="width=device-width">
+        <title>Orkut 2.0 | Cadastro</title>
+    </head>
+    <body>
+        <main>
+            <h1>Faça seu cadastro</h1>
+            <form method="POST">
+                <input class="input-field" placeholder="Primeiro nome" type="text" id="name" name="nome" required>
+                <input class="input-field" placeholder="Sobrenome" type="text" id="surname" name="sobrenome" required>
+                <div class="input-field user-field">
+                    <input placeholder="Nome de usuário" type="text" id="user" name="usuario" required>
+                    <div class="icon"></div>
+                </div>
+                <div class="pass-field input-field">
+                    <input class="pass" placeholder="Senha" type="password" id="password" name="senha" required>
+                    <div class="toggle-password">
+                        <i class="ph ph-eye"></i>
+                    </div>
+                </div>
+                <div class="pass-field input-field">
+                    <input class="pass" placeholder="Repita a senha" type="password" id="repeat-password" required>
+                    <div class="toggle-password">
+                        <i class="ph ph-eye"></i>
+                    </div>
+                </div>
+    
+                <button>
+                    <p>Cadastrar</p>
+                    <i class="ph-bold ph-user-plus"></i>
+                </button>
+            </form>
+        </main>
+        <script src="/static/scripts/form.js"></script>
+        <script src="/static/scripts/cadastrar.js"></script>
+    </body>
+</html>

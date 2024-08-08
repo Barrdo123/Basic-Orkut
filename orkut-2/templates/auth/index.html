@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Orkut 2.0</title>
+    <link rel="shortcut icon" href="/static/img/logo.png" type="image/x-icon">
+    <style>
+        :root {
+            --nav-height: 70px;
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --text-color: #2c3e50;
+            --highlight-color: #ff5252;
+        }
+
+        body {
+            background-color: #121212;
+            color: var(--text-color);
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        .main-title {
+            color: var(--primary-color);
+            font-size: 3em;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            animation: rotateTitle 5s linear infinite;
+        }
+
+        .sub-title {
+            margin-top: 20px;
+            color: var(--secondary-color);
+        }
+
+        .link {
+            color: var(--highlight-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: bold;
+        }
+
+        .link:hover {
+            color: var(--text-color);
+        }
+
+        @keyframes rotateTitle {
+            0% {
+                transform: perspective(600px) rotateY(0deg);
+            }
+            100% {
+                transform: perspective(600px) rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="container">
+        <h1 class="main-title">Bem-vindo ao Orkut 2.0</h1>
+        <h3 class="sub-title">Faça <a href="login.html"link">login</a> se já tem uma conta.</h3>
+        <h3 class="sub-title">Se não tem uma conta, você pode <a href="cadastrar.html" class="link">cadastrar</a>.</h3>
+    </div>
+</body>
+</html>
